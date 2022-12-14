@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #acc7a3;
+}
+
+.textbox {
+  height: auto;
+  width: 50vw;
+  margin: 20% 25vw;
+  background-color: #fff;
+  border: 1px solid #444044;
+  padding: 15px;
+  text-align: center;
+}
+.textbox h1 {
+  color: #444044;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+.textbox p {
+  font-family: "EB Garamond", serif;
+  letter-spacing: 1px;
+  width: 90%;
+  margin: 15px 5%;
+  font-size: 20px;
+}
+
+button {
+  padding: 10px 50px;
+  margin: 30px 10px;
+  background-color: #f8f5eb;
+  border: 1px solid #444044;
+}
+
+a {
+  color: #444044;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.appstore {
+  background-color: #444044;
+}
+.appstore a {
+  color: #f8f5eb;
+}/*# sourceMappingURL=sucseed.css.map */

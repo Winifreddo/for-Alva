@@ -1,0 +1,136 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+
+
+
+
+  /*Hidden information*/
+  .info{
+    display: none;
+    position: absolute;
+    left: 35vw;
+    margin-top: 5vh;
+    position: flex;
+    z-index: 1;
+    height: 90vh;
+    width: 30vw;
+    background-color: white;
+    border:1px solid #444044;
+    text-align: center;
+    font-family:  'Montserrat', sans-serif;
+    color: #444044;
+    top: 0;
+  }
+
+  .info p{
+    width: 80%;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  .last-info{
+    width: 85%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .last-info label{
+      padding-left: 20px;
+  }
+
+  @media  screen and (max-width: 900px) {
+
+    .form input{
+        width: 30vw;
+
+    }
+
+    .gender{
+        width: 40vw; 
+    }
+
+    .header{
+        height: 15vh;
+        width: 100vw;
+        background-color:#acc7a3 ;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    #cirkle input{
+        height: 20px;
+        width: 5vw;
+        display: inline-block;
+    }
+    
+  }
+
+  @media screen and (max-width:510px) {
+
+    h1{
+        font-size:medium;
+        width: 100%;
+    }
+
+    a{
+        font-size: xx-small;
+    }
+
+    .header img{
+        width: 150px;
+        height: 35px;
+    }
+
+    .log-in{
+        width: 20vw;
+    }
+
+    label{
+        font-size: x-small;
+    }
+
+    #cirkle input{
+        height: 15px;
+        width: 5vw;
+        display: inline-block;
+    }
+
+    .form input{
+        width: 40vw;
+
+    }
+
+    .gender{
+        width: 50vw; 
+    }
+
+    button{
+        padding: 5px 20px;
+    }
+
+    
+  }
+
+
+
+
+
+
+
+
+
+
+

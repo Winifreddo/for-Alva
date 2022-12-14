@@ -1,0 +1,54 @@
+
+
+
+
+
+
+
+
+
+
+
+/*FOOTER*/
+
+.footer{
+    background-color: #acc7a3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.info3{
+    text-align: center;
+    padding-top: 1%;
+
+}
+
+.logo-name-footer{
+    font-family: cinzel, sans-serif;
+    word-spacing: 3px;
+    letter-spacing: 3px;
+    margin-bottom: 2px;
+}
+
+.logo-adress-footer{
+    font-family: cinzel, sans-serif; 
+    word-spacing: 3px;
+    letter-spacing: 3px;
+    font-size: x-small;
+    margin-top: 0;
+}
+
+.openin-hours{
+    width: 25vw;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.p-footer{
+    font-family: 'Montserrat', sans-serif; 
+    
+
+}
+

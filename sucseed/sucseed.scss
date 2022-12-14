@@ -1,0 +1,56 @@
+$text-color: #444044;
+$text-back-col: #acc7a3;
+$back-col: #f8f5eb;
+$sun-col: #F4D03F;
+
+@mixin a{
+    color: $text-color;
+    text-decoration: none;
+    font-family:'Montserrat', sans-serif; 
+}
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+    background-color: $text-back-col;
+}
+
+.textbox{
+    height: auto;
+    width: 50vw;
+    margin: 20% 25vw;
+
+    background-color: #fff;
+    border: 1px solid $text-color;
+    padding: 15px;
+    text-align: center;
+    h1{
+        @include a;
+    }
+    p{
+        font-family: 'EB Garamond', serif;
+        letter-spacing: 1px;
+        width: 90%;
+        margin: 15px 5%;
+        font-size: 20px;
+    }
+}
+
+button{
+    padding: 10px 50px;
+    margin: 30px 10px;
+    background-color: $back-col;
+    border: 1px solid $text-color;
+}
+
+a{
+    @include a;
+}
+
+.appstore{
+    background-color: $text-color;
+    a{
+        color: $back-col;
+    }
+}
+

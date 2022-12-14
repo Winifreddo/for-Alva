@@ -1,0 +1,1194 @@
+$text-color: #444044;
+$text-back-col: #acc7a3;
+$back-col: #f8f5eb;
+$sun-col: #F4D03F;
+@mixin a{ 
+    color: $text-color;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+}
+@mixin h2{
+    font-family: 'Montserrat', sans-serif;
+    background-color: $text-back-col;
+    width:fit-content;
+    letter-spacing: 3px;
+    color: $text-color;
+}
+@mixin p{
+    font-family: 'EB Garamond', serif;
+    letter-spacing: 1px;
+    font-size: 20px;
+    color: $text-color;
+}
+
+body{
+    margin: 0; 
+    background-color: $back-col; 
+}
+
+/*MENU*/
+.menu{
+    position: sticky;
+    top: 0%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif; 
+    width: 100vw;
+    background-color: #fff;
+    img{
+        margin: 5px;
+    }
+}
+
+.link{
+    letter-spacing: 3px;
+    margin: 5px 6px 5px 6px;
+    color:$text-color;
+    text-decoration: none;
+    &:Hover{
+        background-color: $text-back-col;
+    }
+}
+
+/*Hamburger menu, hidden in desctop version*/
+
+.hamburger-menu{
+    display: none;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 5vh;
+    align-self: center;
+    justify-content: space-between;
+    margin-top: 10vh ;
+    background-color:#fff;
+    padding-right: 5px;
+    img{
+        margin-top: 5px;
+    }
+    i{
+        font-size: 30px;
+        padding: 0px;
+    }
+}
+
+.logo-mobile{
+    img{
+        height: 40px;
+    }
+}
+
+.dropbtn-menu {
+    background-color: #fff;
+    color: $text-color;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-menu-content-menu {
+    display: none;
+    position: absolute;
+    background-color:#fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-menu-content-menu a {
+    color: $text-color;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Montserrat', sans-serif; 
+    &:Hover{
+        color: #444044;
+    }
+  }
+  
+  .dropdown-menu .dropdown-menu-content-menu a:hover {background-color: $text-back-col}
+  
+  .dropdown-menu:hover .dropdown-menu-content-menu {
+    display: block;
+  }
+  
+  .dropdown-menu:hover .dropbtn-menu {
+    background-color: #fff;
+  }
+
+@media screen and(max-width:690px){
+
+    .menu{
+        display: none;
+    }
+
+    .header-link{
+        display: none;
+    }
+
+    .hamburger-menu{
+        display: flex;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+        align-self: center;
+        justify-content: space-between;
+        margin-top: 10vh;
+        height: 7vh;
+        background-color:#fff;
+        margin-top: 0;
+        img{
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+        i{
+            font-size: 30px;
+            padding: 0px;
+        }
+    }  
+}
+
+
+/* TOP CONTENT*/
+.grid-box{
+    width: 100vw;
+    height: fit-content;
+    img{
+        width: 100vw;
+        height: auto;
+    }
+}
+
+.text-box{
+    height: fit-content;
+    width: 60vw;
+    background-color: rgba(255, 255, 255, 0.566);
+    padding: 20px;
+    position: absolute;
+    top: 45vh;
+    left: 5vw;
+    h1{
+        @include h2;
+        margin-left: 5%;
+    }
+    p{
+        @include p;
+        width: 90%;
+        margin: auto 5% 5% 5%;
+    }
+}
+
+@media screen and(max-width:1152px){
+
+    .text-box{
+        top: 50vh;
+        left: 0vw;
+        padding-top: 20px;
+        width: 100vw;
+        h1{ margin-left: 0;
+        }
+        p{
+            margin: 0; 
+            margin-left: 0;
+        }
+    }   
+}
+
+@media screen and(max-width:1000px){
+
+    .text-box{
+        top: 50vh;
+        left: 0vw;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100vw;
+        h1{
+            font-size: 28px;
+        }
+        p{
+            font-size: 18px;  
+        }
+    }   
+}
+
+@media screen and(max-width:900px){
+
+    .text-box{
+        top: 40vh;
+        left: 0vw;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100vw;
+        h1{
+            font-size: 26px;
+        }
+        p{
+            font-size: 16px; 
+            margin: auto 2% 2% 2%;
+        }
+    }   
+}
+
+@media screen and(max-width:775px){
+
+    .text-box{
+        top: 20vh;
+        left: 0vw;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100vw;
+        h1{
+            font-size: 26px;
+        }
+        p{
+            font-size: 16px; 
+            margin: auto 2% 2% 2%;
+        }
+    }   
+}
+
+@media screen and(max-width:630px){
+
+    .text-box{
+        top: 5vh;
+        left: 0vw;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100vw;
+        position:inherit;
+        h1{
+            font-size: 26px;
+        }
+        p{
+            font-size: 16px; 
+            margin: auto 2% 2% 2%;
+        }
+    }   
+}
+
+/* BOTTOM CONTENT */
+.background{
+    background-color:$back-col;
+    width: 90vw;
+    height: 150vh;
+    margin: 10vh 5vw;
+    padding-top: 10vh;
+    text-align: center; 
+    border: 0.5px solid $text-color;
+}
+
+.text-bottom{
+    h1{
+        @include h2;
+        font-size: 42px;
+        display: block;
+        margin: auto auto 5vh auto;
+    }
+    p{
+        @include p;
+        width: 90%;
+        margin: auto 5% 5% 5%;
+    }
+}
+
+.buttons-row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.dropbtn{
+    background-color:$text-back-col;
+    color: white;
+    padding: 16px 50px;
+    font-size: 16px;
+    border: none;
+    margin: 10 5px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content{
+    display: none;
+    position: absolute;
+    top: 10vh;
+    left: 5vw;
+    align-items: inline;
+    height:600px;
+    width:90%;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    .textbox{
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        background-color: rgba(255, 255, 255, 0.547);
+        height: 80%;
+        width: 400px;
+    }
+    h1{
+        font-family: 'Montserrat', sans-serif; 
+    }
+    p{
+        @include p;
+    }
+  }
+  
+  .dropdown-content{ 
+      img{
+       height: 600px;
+       width: 70vw;
+       display: block;
+       border: 1px solid $text-color;
+       }  
+    } 
+    
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: $text-back-col;}
+
+
+   @media screen and(max-width:1150px){
+
+    .dropdown-content{
+        box-shadow: none;
+        img{
+         height: 500px;
+         width: 70vw;}  
+      } 
+
+      .dropdown-content{
+        .textbox{
+            top: 5%;
+            left: 10%;
+            height: 70%;
+            width: 400px;}
+        h1{font-size: 24px;}
+        p{font-size: 18px;}
+      }
+   }
+
+@media screen and(max-width:952px){
+    
+    .dropdown-content
+    { 
+        img{
+         height: 450px;
+         width: 80vw;
+         display: block;
+         border: 1px solid $text-color;}  
+      }
+
+      .dropdown-content{
+        top: 20vh;
+        left: 2vw;
+        .textbox{
+            top: 5%;
+            left: 10%;
+            height: 60%;
+            width: 400px;
+        }
+        h1{font-size: 24px;}
+        p{font-size: 18px;}
+      }
+
+      .text-bottom{
+        h1{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 32px;
+            background-color: $text-back-col;
+            width: fit-content;
+            display: block;
+            margin: auto auto 5vh auto;
+        }
+   }
+}
+
+   @media screen and(max-width:725px){
+    
+    .dropdown-content
+    { 
+        img{
+         height: 350px;
+         width: 80vw;
+         display: block;
+         border: 1px solid $text-color;
+         }  
+      }
+
+      .dropdown-content{
+        top: 20vh;
+        left: 0vw;
+        .textbox{
+            top: 5%;
+            left: 10%;
+            height: 50%;
+            width: 370px;
+        }
+        h1{font-size: 20px;}
+        p{font-size: 16px;}
+      }
+   }
+
+   @media screen and(max-width:571px){
+    
+    .background{
+        height: 160vh;
+    }
+
+    .dropdown-content
+    { 
+        img{
+         height: 350px;
+         width: 85vw;
+         }  
+      }
+
+      .dropdown-content{
+        top: 30vh;
+        left: -3vw;
+        .textbox{
+            top: 1vh;
+            left: 1vw;
+            height: 57%;
+            width: 300px;
+        }
+        h1{font-size: 20px;}
+        p{font-size: 16px;}
+      }
+   }
+
+  .dropbtn1{
+    background-color:$text-back-col;
+    color: white;
+    padding: 16px 50px;
+    font-size: 16px;
+    border: none;
+    margin: 10 5px;
+  }
+  
+  .dropdown1 {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown1-content1{
+    display: none;
+    position: absolute;
+    top: 10vh;
+    left: -12vw;
+    align-items: inline;
+    height:600px;
+    width:90%;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    .textbox1{
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        background-color: rgba(255, 255, 255, 0.547);;
+        height: 80%;
+        width: 400px;
+    }
+    h1{
+        font-family: 'Montserrat', sans-serif; 
+    }
+    p{
+        font-family: 'EB Garamond', serif;
+        letter-spacing: 1px;
+        font-size: 20px;
+    }
+  }
+  
+  .dropdown1-content1
+  { 
+      img{
+       height: 600px;
+       width: 70vw;
+       display: block;
+       border: 1px solid $text-color;
+       }  
+    } 
+    
+  .dropdown1-content1 a:hover {background-color: #ddd;}
+  
+  .dropdown1:hover .dropdown1-content1 {display: block;}
+  
+  .dropdown1:hover .dropbtn1 {background-color: $text-back-col;}
+
+  @media screen and(max-width:1150px){
+
+    .dropdown1-content1
+    { box-shadow: none;
+        img{
+         height: 500px;
+         width: 70vw;
+         }  
+      } 
+
+      .dropdown1-content1{
+        .textbox1{
+            top: 5%;
+            left: 10%;
+            height: 70%;
+            width: 400px;
+        }
+        h1{font-size: 24px;}
+        p{font-size: 18px;}
+      }
+   }
+
+   @media screen and(max-width:952px){
+    
+    .dropdown1-content1
+    { 
+        img{
+         height: 450px;
+         width: 80vw;
+         display: block;
+         border: 1px solid $text-color;
+         }  
+      }
+
+      .dropdown1-content1{
+        top: 20vh;
+        left: -20vw;
+        .textbox1{
+            top: 5%;
+            left: 10%;
+            height: 60%;
+            width: 400px;
+        }
+        h1{font-size: 24px;}
+        p{font-size: 18px;}
+      }
+   }
+
+   @media screen and(max-width:725px){
+    
+    .dropdown1-content1
+    { 
+        img{
+         height: 350px;
+         width: 80vw;
+         display: block;
+         border: 1px solid $text-color;
+         }  
+      }
+
+      .dropdown1-content1{
+        top: 20vh;
+        left: -28vw;
+        .textbox1{
+            top: 5%;
+            left: 10%;
+            height: 50%;
+            width: 370px;
+        }
+        h1{font-size: 20px;}
+        p{font-size: 16px;}
+      }
+   }
+
+   @media screen and(max-width:571px){
+    
+    .background{
+        height: 180vh;
+    }
+
+    .dropdown1-content1
+    { 
+        img{
+         height: 350px;
+         width: 85vw;
+         }  
+      }
+
+      .dropdown1-content1{
+        top: 30vh;
+        left: -48vw;
+        .textbox1{
+            top: 1vh;
+            left: 1vw;
+            height: 57%;
+            width: 300px;
+        }
+        h1{font-size: 20px;}
+        p{font-size: 16px;}
+      }
+   }
+   
+  .dropbtn2{
+    background-color:$text-back-col;
+    color: white;
+    padding: 16px 50px;
+    font-size: 16px;
+    border: none;
+    margin: 10 5px;
+  }
+  
+  .dropdown2{
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown2-content2{
+    display: none;
+    position: absolute;
+    top: 10vh;
+    left: -31vw;
+    align-items: inline;
+    height:600px;
+    width:90%;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    .textbox2{
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        background-color: rgba(255, 255, 255, 0.547);;
+        height: 80%;
+        width: 400px;
+    }
+    h1{
+        font-family: 'Montserrat', sans-serif; 
+    }
+    p{
+        font-family: 'EB Garamond', serif;
+        letter-spacing: 1px;
+        font-size: 20px;
+    }
+  }
+  
+  .dropdown2-content2{ 
+      img{
+       height: 600px;
+       width: 70vw;
+       display: block;
+       border: 1px solid $text-color;
+       }  
+    } 
+    
+  .dropdown2-content2 a:hover {background-color: #ddd;}
+  
+  .dropdown2:hover .dropdown2-content2 {display: block;}
+  
+  .dropdown2:hover .dropbtn2 {background-color: $text-back-col;}
+
+  @media screen and(max-width:1150px){
+
+    .dropdown2-content2
+    { box-shadow: none;
+        img{
+         height: 500px;
+         width: 70vw;
+         }  
+      } 
+
+      .dropdown2-content2{
+        .textbox2{
+            top: 5%;
+            left: 10%;
+            height: 70%;
+            width: 400px;
+        }
+        h1{font-size: 24px;}
+        p{font-size: 18px;}
+      }
+   }
+
+   @media screen and(max-width:952px) {
+    
+    .dropdown2-content2
+    { 
+        img{
+         height: 450px;
+         width: 80vw;
+         display: block;
+         border: 1px solid $text-color;
+         }  
+      }
+
+      .dropdown2-content2{
+        top: 20vh;
+        left: -45vw;
+        .textbox2{
+            top: 5%;
+            left: 10%;
+            height: 60%;
+            width: 400px;
+        }
+        h1{font-size: 24px;}
+        p{font-size: 18px;}
+      }
+   }
+
+   @media screen and(max-width:725px) {
+    
+    .dropdown2-content2
+    { 
+        img{
+         height: 350px;
+         width: 80vw;
+         display: block;
+         border: 1px solid $text-color;
+         }  
+      }
+
+      .dropdown2-content2{
+        top: 20vh;
+        left: -62vw;
+        .textbox2{
+            top: 5%;
+            left: 10%;
+            height: 50%;
+            width: 370px;
+        }
+        h1{font-size: 20px;}
+        p{font-size: 16px;}
+      }
+   }
+
+   @media screen and(max-width:571px) {
+    
+    .background{
+        height: 180vh;
+    }
+
+    .dropdown2-content2
+    { 
+        img{
+         height: 350px;
+         width: 85vw;
+         }  
+      }
+
+      .dropdown2-content2{
+        top: 20vh;
+        left: -5vw;
+        .textbox2{
+            top: 1vh;
+            left: 1vw;
+            height: 57%;
+            width: 300px;
+        }
+        h1{font-size: 20px;}
+        p{font-size: 16px;}
+      }
+   }
+
+  .dropbtn3{
+    background-color:$text-back-col;
+    color: white;
+    padding: 16px 50px;
+    font-size: 16px;
+    border: none;
+    margin: 10 5px;
+  }
+  
+  .dropdown3{
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown3-content3{
+    display: none;
+    position: absolute;
+    top: 10vh;
+    left: -47vw;
+    align-items: inline;
+    height:600px;
+    width:90%;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    .textbox3{
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        background-color: rgba(255, 255, 255, 0.547);;
+        height: 80%;
+        width: 400px;
+    }
+    h1{
+        font-family: 'Montserrat', sans-serif; 
+    }
+    p{
+        font-family: 'EB Garamond', serif;
+        letter-spacing: 1px;
+        font-size: 20px;
+    }
+  }
+  
+  .dropdown3-content3{ 
+      img{
+       height: 600px;
+       width: 70vw;
+       display: block;
+       border: 1px solid $text-color;
+       }  
+    } 
+    
+  .dropdown3-content3 a:hover {background-color: #ddd;}
+  
+  .dropdown3:hover .dropdown3-content3 {display: block;}
+  
+  .dropdown3:hover .dropbtn3 {background-color: $text-back-col;}
+
+  @media screen and(max-width:1150px){
+
+    .dropdown3-content3
+    { box-shadow: none;
+        img{
+         height: 500px;
+         width: 70vw;
+         }  
+      } 
+
+      .dropdown3-content3{
+        .textbox3{
+            top: 5%;
+            left: 10%;
+            height: 70%;
+            width: 400px;
+        }
+        h1{font-size: 24px;}
+        p{font-size: 18px;}
+      }
+   }
+
+   @media screen and(max-width:952px) {
+    
+    .dropdown3-content3
+    { 
+        img{
+         height: 450px;
+         width: 80vw;
+         display: block;
+         border: 1px solid $text-color;
+         }  
+      }
+
+      .dropdown3-content3{
+        top: 20vh;
+        left: -65vw;
+        .textbox3{
+            top: 5%;
+            left: 10%;
+            height: 60%;
+            width: 400px;
+        }
+        h1{font-size: 24px;}
+        p{font-size: 18px;}
+      }
+   }
+
+   @media screen and(max-width:725px) {
+    
+    .dropdown3-content3
+    { 
+        img{
+         height: 350px;
+         width: 80vw;
+         display: block;
+         border: 1px solid $text-color;
+         }  
+      }
+
+      .dropdown3-content3{
+        top: 10vh;
+        left: -5vw;
+        .textbox3{
+            top: 5%;
+            left: 10%;
+            height: 50%;
+            width: 370px;
+        }
+        h1{font-size: 20px;}
+        p{font-size: 16px;}
+      }
+   }
+
+   @media screen and(max-width:571px) {
+    
+    .background{
+        height: 180vh;
+    }
+
+    .dropdown3-content3
+    { 
+        img{
+         height: 350px;
+         width: 85vw;
+         }  
+      }
+
+      .dropdown3-content3{
+        top: 20vh;
+        left: -48vw;
+        .textbox3{
+            top: 1vh;
+            left: 1vw;
+            height: 57%;
+            width: 300px;
+        }
+        h1{font-size: 20px;}
+        p{font-size: 16px;}
+      }
+   }
+
+  .dropbtn4{
+    background-color:$text-back-col;
+    color: white;
+    padding: 16px 50px;
+    font-size: 16px;
+    border: none;
+    margin: 10 5px;
+  }
+  
+  .dropdown4{
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown4-content4{
+    display: none;
+    position: absolute;
+    top: 10vh;
+    left: -65vw;
+    align-items: inline;
+    height:600px;
+    width:90%;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    .textbox4{
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        background-color: rgba(255, 255, 255, 0.547);;
+        height: 80%;
+        width: 400px;
+    }
+    h1{
+        font-family: 'Montserrat', sans-serif; 
+    }
+    p{
+        font-family: 'EB Garamond', serif;
+        letter-spacing: 1px;
+        font-size: 20px;
+    }
+  }
+  
+  .dropdown4-content4
+  { 
+      img{
+       height: 600px;
+       width: 70vw;
+       display: block;
+       border: 1px solid $text-color;
+       }  
+    } 
+    
+  .dropdown4-content4 a:hover {background-color: #ddd;}
+  
+  .dropdown4:hover .dropdown4-content4 {display: block;}
+  
+  .dropdown4:hover .dropbtn4 {background-color: $text-back-col;}
+
+  @media screen and(max-width:1150px){
+
+    .dropdown4-content4
+    { box-shadow: none;
+        img{
+         height: 500px;
+         width: 70vw;
+         }  
+      } 
+
+      .dropdown4-content4{
+        .textbox4{
+            top: 5%;
+            left: 10%;
+            height: 70%;
+            width: 400px;
+        }
+        h1{font-size: 24px;}
+        p{font-size: 18px;}
+      }
+   }
+
+   @media screen and(max-width:952px){
+    
+    .dropdown4-content4
+    { 
+        img{
+         height: 450px;
+         width: 80vw;
+         display: block;
+         border: 1px solid $text-color;
+         }  
+      }
+
+      .dropdown4-content4{
+        top: 10vh;
+        left: -30vw;
+        .textbox4{
+            top: 5%;
+            left: 10%;
+            height: 60%;
+            width: 400px;
+        }
+        h1{font-size: 24px;}
+        p{font-size: 18px;}
+      }
+   }
+
+   @media screen and(max-width:725px){
+    
+    .dropdown4-content4
+    { 
+        img{
+         height: 350px;
+         width: 80vw;
+         display: block;
+         border: 1px solid $text-color;
+         }  
+      }
+
+      .dropdown4-content4{
+        top: 10vh;
+        left: -50vw;
+        .textbox4{
+            top: 5%;
+            left: 10%;
+            height: 50%;
+            width: 370px;
+        }
+        h1{font-size: 20px;}
+        p{font-size: 16px;}
+      }
+   }
+
+   @media screen and(max-width:571px){
+    
+    .background{
+        height: 180vh;
+    }
+
+    .dropdown4-content4
+    { 
+        img{
+         height: 350px;
+         width: 85vw;
+         }  
+      }
+
+      .dropdown4-content4{
+        top: 10vh;
+        left: -27vw;
+        .textbox4{
+            top: 1vh;
+            left: 1vw;
+            height: 57%;
+            width: 300px;
+        }
+        h1{font-size: 20px;}
+        p{font-size: 16px;}
+      }
+   }
+
+/*INSTAGRAM*/
+
+.instagram{
+    width: 100vw;
+    height: fit-content;
+    background-color: $back-col;
+    text-align: center;
+    margin: 5vh auto 2vh auto;
+    a{
+        font-family: 'Montserrat', sans-serif; 
+        color: $text-color;
+        text-decoration: none;
+        font-size: 18px;
+        &:hover{
+            font-size: 110%;
+        }
+    }
+    i{
+        margin: 5px;
+        font-size: 20px;
+    }
+}
+
+/*FOOTER*/
+#footer{
+    background-color: #acc7a3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.info1{
+    text-align: center;
+    padding-top: 1%;
+    h3{
+        
+        font-family: 'Montserrat', sans-serif; 
+    }
+    p{
+        font-family: 'Montserrat', sans-serif; 
+    }
+}
+
+@media screen and(max-width:745px){
+
+    .info1{
+        text-align: center;
+        padding-top: 1%;
+        width: 25vw;   
+        }
+        h3{
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 20px;
+        }
+        p{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px; 
+        }
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,154 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+    background-color:  #acc7a3;
+}
+
+.spin-box{
+   height: 30vh;
+   width: 100vw;
+   background-color: #acc7a3;
+   margin-top: 5vh;
+   display: inline-block;
+   text-align: center;
+}
+
+.spinning{
+    width: 20%;
+    margin: auto 38%;
+    background-color: #acc7a3;
+    animation: spinnoff 5s;
+    animation-iteration-count: 10;
+    transform: perspective(800px) rotatey(0deg);
+}
+
+img{
+    color: white;
+    height:200px
+}
+
+#id-ball{
+    background-color: #444044;
+    height: 7px;
+    width: 7px;
+    margin: 3px;
+    border-radius: 50%;
+}
+
+.move-area{
+height: 5vh;
+width: 5vw;
+margin-top: 0vh;
+margin-left: 45vw;
+display: flex;
+flex-direction: column;
+background-color: #acc7a3;
+}
+
+.animation{
+    display: flex;
+    animation: side-to-side ease-in forwards 20 alternate;
+    animation-duration: 1s;
+}
+
+
+
+@keyframes spinnoff{
+
+    0% {transform: perspective(800px) rotatey(0deg);}
+
+    100% {transform: perspective(800px) rotatey(360deg);}
+}
+
+ @keyframes side-to-side {
+        0% {transform: translateX(0)}
+        
+        100% {transform: translateX(80%)}
+}
+
+
+@media screen and (max-width:950px){
+    .spinning{
+        width: 20%;
+        margin: auto 35%;
+    }
+
+    img{
+        height: 100px;
+    }
+
+    .spin-box{
+        height: 18vh;
+     }
+
+    #id-ball{
+        background-color: #444044;
+        height: 5px;
+        width: 5px;
+        margin: 3px;
+        border-radius: 50%;
+    }
+    
+    .move-area{
+    height: 5vh;
+    width: 10vw;
+    margin-left: 37vw;
+    }
+}
+
+.exit{
+    height: 20vh;
+    padding-top: 10px ;
+    width: 100vw;
+    background-color: #acc7a3;
+}
+
+a{
+    color: #444044;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    font-size: x-large;
+    margin: 10px;
+}
+
+.header{
+    width: 100vw;
+    height: 5vh;
+    display: inline-block;
+    text-align: center;
+    
+}
+
+h1{
+    color: #444044;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    font-size: x-large;
+    margin: 10px;
+}
+
+@media screen and (max-width:950px){
+    h1{
+        color: #444044;
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 2px;
+        font-size: large;
+        margin: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+   
+
+
+
